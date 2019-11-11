@@ -1,0 +1,543 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+nav {
+    background-color: white;
+    height: 151px;
+}
+body{
+	/* background:#e8e8e8; */
+	zoom:94.6%;
+}
+.upperbar{
+    /* width: 100%; */
+    position: absolute;
+    left: 215px;
+	right: 215px;
+    height: 98px;
+    background: white;
+}
+.myacc{
+    position: relative;
+    width: 194px; /* 130 */
+    top: 30px;
+    float: right;
+    height: 38px;
+    /* background: #f16d7f; */
+}
+.searchblock{
+border: solid #ececec 1px;
+    margin: 32px 38px;
+    float: left;
+    width: 444px;
+    height: 38px;
+}
+.lowbar{
+	border-top: solid #ececec 1px;
+    width: 1142px;
+    position: absolute;
+    top: 98px;
+    height: 53px;
+    background: white;
+	padding-left: 464px;
+}
+.droplist{
+	height: 38px;
+    float: right;
+    position: relative;
+    background: #f16d7f;
+    width: 130px;
+}
+.wdroplist{
+	height: 38px;
+	width: 86px;
+    float: left;
+    position: relative;
+    background: #f9f9f9;
+}
+.lowbar ul {
+  list-style-type: none;
+  margin: 0;
+  left:0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.lowbar li {
+  float: left;
+}
+
+.lowbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 17px 16px;
+  text-decoration: none;
+}
+
+.lowbar li a:hover {
+  background-color: #d3d3d3;
+} 
+.imageframe{
+  height: 609px;
+  background-color: #d3d3d3;	
+}
+.iftext {
+    font-size: 52px;
+    font-family: fantasy;
+    position: absolute;
+    left: 230px;
+    top: 375px;
+    padding: 20px;
+    border-left: solid #f16d7f 15px;
+}
+.last-word{
+	color:#f16d7f;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 866px;
+    margin-top: 78px;
+    position: relative;
+    left: 230px;
+    width: 1140px;
+}
+.featured{
+	text-align:center;
+	width:fit-content;
+    height: 240px;
+    font-size: 22px;
+    font-family: fantasy;
+    left: 40%;
+	position:relative;
+}
+.fitems{
+	display:flex;
+	flex-wrap: wrap;
+	margin-left:230px;
+	width:1140px;
+	height:740px;
+	/* background:red; */
+}
+.fitems div{
+	margin-left:30px;	
+	width:262px;
+	height:348px;
+	/* background:green; */
+}
+.fitems img{
+	    display: block;
+    width: 262px;
+    height: 279px;
+}
+#title{
+    color: #000000;
+    top: 3%;
+    font-size: 16px;
+    font-family: auto;
+    left: 5%;
+    position: relative;
+}
+#price{
+    color: #f16d7f;
+    top: 25px;
+    font-size: 15px;
+    font-family: fantasy;
+    left: 5%;
+    position: relative;
+}
+
+#mitem{
+    display: block;
+    position: relative;
+}
+
+#mpitem{
+    position: absolute;
+    background: white;
+    width: 117px;
+    top: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;}
+#up{
+	display:contents;
+    position: absolute;
+    top: 20px;
+    padding-left: 20px;
+    margin-top: 25px;
+    font-size: 16pt;
+    font-family: monospace;
+}
+
+#down{
+	display:contents;
+	top: 45px;
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 25px;
+    font-size: 24pt;
+    color: #f16d7f;
+    font-family: fantasy;
+}
+.prbrowse{
+	color:white;
+	text-align:center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 48px;
+    background: #f16d7f;
+    width: 210px;
+    position: relative;
+    left: 44%;
+}
+.imframe2{
+    position: relative;
+    height: 530px;
+    width: 1140px;
+    left: 230px;
+}
+.subscribe{
+    margin-top: 100px;
+    position: relative;
+    height: 435px;
+    width: 100%;
+}
+.comm{
+	margin-top:120px;
+/* background:green; */
+position:absolute;
+margin-left:230px;
+width:505px;
+height:173px;
+}
+#cim{
+	overflow:hidden;
+	background:white;
+	width:83px;
+	height:83px;
+    border-radius: 100px; /* Радиус скругления */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+#ctext{
+/* background: black; */
+font-style: oblique;
+    width: 385px;
+    height: 160px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+}
+.cname{
+    color: #f16d7f;
+    font-size: 15px;
+    font-family: fantasy;
+    left: 5%;
+    position: relative;
+    left: 118px;
+}
+#slid{
+        margin-left: 13px;
+    left: 20%;
+    bottom: -66px;
+    width: 40px;
+    height: 5px;
+    background: #959cbe;
+    position: relative;
+    float: left;
+}
+footer{
+	margin-top:100px;
+	height:337px;
+}
+.downbar{
+	overflow:hidden;
+	margin-left:210px;
+	width:1170px;
+	height:270px;
+}
+#downlist{
+	position: relative;
+    top: -60%;
+    left: 464px;
+    list-style: none;
+}
+#downlist li a{
+    color: #9999;
+    text-decoration: none;
+    font-size: 13pt;
+	padding-top:5px;
+}
+#downlist li{
+display:flex;
+}
+
+.gr{
+	height:20%;
+	background:#e6e6e6
+}
+.gr p{
+    padding-top: 25px;
+    margin-left: 208px;
+}
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Make the image to responsive */
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.fitems .overlay {
+	margin:0px;
+    position: relative;
+    top: -91%;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    height: 80%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #59575780;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.fitems div:hover .overlay {
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.fitems .icon {
+    width: 41%;
+    height: 59%;
+    font-size: 100px;
+    position: absolute;
+    top: 43%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  left:-45px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 258px;
+  min-height: 440px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  text-align:center;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  top: 55px;
+  position: relative;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+.dropdown-content2 {
+    flex-wrap: wrap;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 774px;
+    height: 269px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.col1 {
+    width: 240px;
+}
+.col2 {
+    width: 240px;
+}
+.col1 p {
+	max-width: 240px;
+    margin-left: 25px;
+    margin-top: 10px;
+    border-bottom: 1px grey solid;
+    font-family: fantasy;
+}
+.col2 p {
+	max-width: 240px;
+    margin-left: 25px;
+    margin-top: 10px;
+    border-bottom: 1px grey solid;
+    font-family: fantasy;
+}
+.col3 {
+    top: 101px;
+    width: 240px;
+    position: relative;
+    left: -240px;
+}
+.col4 {
+    top: -205px;
+    right: -480px;
+    width: 240px;
+    position: relative;
+}
+.wdroplist:hover .dropdown-content2 {display: flex;}
+
+#downlist2{
+	position: relative;
+    margin-left: 25px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+#downlist2 li {
+    display: flex;
+}
+
+#downlist2 li a {
+    color: #646464;
+    text-decoration: none;
+    font-size: 13pt;
+    padding-top: 5px;
+}
+#arival {
+    display: flex;
+    position: relative;
+    height: 148px;
+    background: #f8f3f4;
+    top: 151px;
+}
+#main{
+	flex-wrap: wrap;
+	font-family: sans-serif;
+	display:flex;
+    position: relative;
+    left: 215px;
+    margin-right: 425;
+    height: 626px;
+    /* background: gray; */
+    margin-top: 170px;
+}
+/* #main #cln1,#cln2,#cln3,#cln4,#cln5,#cln6{
+	height:20px;
+} */
+#nitem    {
+    left: 20px;
+    position: relative;
+    top: -25;
+    width: 1140px;
+    height: 164px;
+    background: white;
+    border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
+}
+#main a:hover {
+  background-color: #d3d3d3;
+} 
+#main a{
+	bottom: -32px;
+    text-align: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    height: fit-content;
+    width: 235px;
+    background: white;
+    color: gray;
+    border: 1px grey solid;
+}
+#cln6 img:hover{
+	 background:#ff5050;
+}
+#nitem img{
+		transition: transform .2s; /* Animation */
+}
+#nitem img:hover{
+	transform: scale(3);
+	position:relative;
+	z-index:9999;
+}
+#inputs {
+	overflow:hidden;
+	flex-wrap: wrap;
+	font-family: sans-serif;
+	display:flex;
+    position: relative;
+    left: 215px;
+    margin-right: 425px;
+    height: 269px;
+    /* background: gray; */
+    margin-top: 65px;
+}
+
+#inputs a {
+    font-size: 10pt;
+    bottom: -20px;
+    padding: 7px 7px;
+    text-decoration: none;
+    /* display: block; */
+    position: relative;
+    height: fit-content;
+    background: white;
+    color: gray;
+    border: 1px grey solid;
+}
+#inputs input{
+	width: 355px;
+    margin-top: 15px;
+    height: 45px;
+    font-size: 15px;
+margin-right: 2000;}
+#pro{
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    display: flex;
+    position: absolute;
+    height: 215px;
+    width: 360px;
+    background: #f5f3f3;
+    right: 0px;
+}
+#inputs a:hover {
+  background-color: #d3d3d3;
+  /* display:none; */
+} 
