@@ -1,0 +1,403 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>РМХ - Радио</title>
+    <link rel="icon" type="icon-x" href="img/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+        function toggleEntry(element) {
+            const parentEntry = element.closest('.infoEntry');
+            if (parentEntry) {
+                parentEntry.classList.toggle('entryOpen');
+
+                if (parentEntry.classList.contains('entryOpen')) {
+                    setTimeout(() => {
+                        const rect = parentEntry.getBoundingClientRect();
+                        window.scrollBy({
+                            top: rect.top - 20,
+                            behavior: 'smooth'
+                        });
+                    }, 250);
+                }
+            }
+        }
+
+        // Function to get URL parameters
+        function getParameterByName(name) {
+            const url = window.location.href;
+            const params = new URLSearchParams(new URL(url).search);
+            return params.get(name);
+        }
+
+        function expandBlockByIndex(index) {
+
+            const moreButtons = document.querySelectorAll('.infoMore');
+
+            if (moreButtons[index]) {
+                moreButtons[index].click();
+                return true;
+            }
+            return false;
+        }
+
+        function expandFromUrl(paramName = 'expand') {
+            const paramValue = getParameterByName(paramName);
+
+            if (paramValue !== null) {
+
+                const index = parseInt(paramValue);
+
+                if (!isNaN(index)) {
+
+                    if (document.readyState === 'complete') {
+                        expandBlockByIndex(index);
+                    } else {
+                        window.addEventListener('load', function () {
+                            expandBlockByIndex(index);
+                        });
+                    }
+                }
+            }
+        }
+
+        expandFromUrl();
+
+        function liftSocials(el) {
+            const socials = el.parentElement.querySelector('.socials');
+
+            if (!socials) return;
+            socials.style.top = '10px';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upGos">Государственное унитарное предприятие Донецкой Народной Республики «Республиканский меди
+            холдинг» (ГУП ДНР «РМХ») — официальный сайт</div>
+        <div class="Header">
+            <a class="headelement" href="index.html">Главная</a>
+            <div class="separator"></div>
+            <div class="headelement">Вакансии</div>
+            <div class="separator"></div>
+            <a class="headelement" href="advert.html">Рекламодателям</a>
+            <div class="separator"></div>
+            <div class="headelement">Контакты</div>
+            <div class="filler"></div>
+        </div>
+        <div class="logoBlock">
+            <div class="logoGrand">
+                <img src="img/logoRmx.png">
+            </div>
+            <div class="longButtons">
+				<a class="longButton" href="tv.html">ТВ</a>
+				<a class="longButton" href="magazine.html">Газеты</a>
+				<div class="longButton active">Радио</div>
+				<a class="longButton" href="network.html">Сетевые издания</a>
+            </div>
+        </div>
+        <div class="infoWrapper">
+            <div class="infoEntry radio">
+                <div class="infoMeta">
+                    <div class="infoLogoRadio"><img src="img/1resp_tv.png" alt="Первый Республиканский Канал ДНР" class="">
+                    </div>
+                    <div class="infoTextRadio">
+                        <strong>Радио «Столица Донбасс»</strong>
+                        <div class="socials" style="top: 10px;">
+                            <a href="https://vk.com/radio100lica">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="infoMore" onclick="toggleEntry(this); liftSocials(this);">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="radioFocus">
+                        <strong>Формат вещания:</strong>
+                        <br><span>только любимые хиты и проверенные временем композиции. Утреннее шоу, свежие новости,
+                            актуальные интервью.</span>
+                    </div>
+                </div>
+                <div class="infoEntryExpand">
+                    <div class="infoDescription">
+                        <div class="infoDescBlock">
+                            <strong>Начало вещания:</strong>
+                            <br>20 января 2018 года.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Частоты вещания:</strong>
+                            <br>Донецк - <strong>100.00 FM</strong>
+                            <br>Тельманово - <strong>93.1 FM</strong>
+                            <br>Васильевка - <strong>96.1 FM</strong>
+                            <br>Дитровка - <strong>97.2 FM</strong>
+                            <br>Новоазовск - <strong>100.9 FM</strong>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Столица - это не только музыка, это хорошее настроение, насыщенный эфир
+                            Утреннее шоу, свежие новости, актуальные интервью!
+
+                            <br><br> А ещё, Столица - это множество проектов вместе с
+                            вами: Радиофестиваль КАРАОКЕ, тематические Марафоны к праздникам, живые концерты,
+                            подарки для самых активных, и даже предложение руки и сердца, - и все это, в
+                            прямом эфире! Поэтому, День рождения радиостанции — это повод поблагодарить наших
+                            слушателей за то, что они помогают делать наш эфир живым и интересным
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Формат вещания:</strong>
+                            <br>только любимые хиты и проверенные временем композиции. Утреннее шоу, свежие новости,
+                            актуальные интервью и интерактив с слушателями.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты для рекламы:</strong>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="phone icon" class="icon-left">
+                                <strong>+7949 444 44 44</strong>
+                            </div>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="phone icon" class="icon-left">
+                                <strong>302 81 90</strong>
+                            </div>
+                            <br>короткий номер <strong>32-118</strong> с мобильного оператора «Феникс»
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>stolicafm@mail.ru</strong>
+                            </div>
+    <br><strong>Социальные сети:</strong>
+                            <div class="socialz" style="margin-top: 6px;">
+                                <a href="https://vk.com/radio100lica">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="infoEntry radio">
+                <div class="infoMeta">
+                    <div class="infoLogoRadio"><img src="img/1resp_tv.png" alt="Первый Республиканский Канал ДНР" class="">
+                    </div>
+                    <div class="infoTextRadio">
+                        <strong>Радио «Республика Донбасс»</strong>
+                        <div class="socials" style="top: 10px;">
+                            <a href="https://vk.com/radio_respublica">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="infoMore" onclick="toggleEntry(this); liftSocials(this);">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="radioFocus">
+                        <strong>Формат вещания:</strong>
+                        <br><span>обстановка в Республике и на фронте, внутренняя политика и экономика, восстановление
+                            региона, события в Россий и на постсоветском пространстве.</span>
+                    </div>
+                </div>
+                <div class="infoEntryExpand">
+                    <div class="infoDescription">
+                        <div class="infoDescBlock">
+                            <strong>Начало вещания:</strong>
+                            <br>14 апреля 2014 года.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Частоты вещания:</strong>
+                            <br>Донецк <strong>99.00 FM</strong>
+                            <br>Новоазовск <strong>96.8 FM</strong>
+                            <br>Старобешевский район <strong>100.5 FM</strong>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Радио «Республика Донбасс» – первое независимое средство массовой информации
+                            Донецкой
+                            Народной Республики.
+                            Республика - начала свое вещание из Дома Правительства, передавая достоверную информацию о
+                            событиях, происходящих в Донбассе. Радиостанция освещала подготовку к Референдуму 11 мая
+                            2014 года, выборы Главы Республики, сводки о боевых действиях стали ежедневной частью эфира.
+
+                            <br><br>Радио «Республика Донбасс» сегодня – это первая и единственная информационная
+                            радиостанция ДНР. Это актуальные новости о событиях в Республике и Мире, специальные
+                            репортажи, авторские информационные, общественно-политические, познавательные программы,
+                            эксклюзивные интервью.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Формат вещания:</strong>
+                            <br>обстановка в Республике и на фронте, внутренняя политика и экономика, восстановление
+                            региона, события в Россий и на постсоветском пространстве.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Телефон рекламной службы:</strong>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7(949) 302-54-17</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>radio.dnr@yandex.ru</strong>
+                            </div>
+    <br><strong>Социальные сети:</strong>
+                            <div class="socialz" style="margin-top: 6px;">
+                                <a href="https://vk.com/radio_respublica">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="infoEntry radio">
+                <div class="infoMeta">
+                    <div class="infoLogoRadio"><img src="img/rad_comet.png" alt="Первый Республиканский Канал ДНР" class="">
+                    </div>
+                    <div class="infoTextRadio">
+                        <strong>Радио «Комета»</strong>
+                        <div class="socials" style="top: 10px;">
+                            <a href="https://vk.com/public126273901">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="infoMore" onclick="toggleEntry(this); liftSocials(this);">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="radioFocus">
+                        <strong>Формат вещания:</strong>
+                        <br><span>рок и городской романс.
+                            <br>В эфире всегда - актуальные
+                            новости и тематические
+                            интервью!</span>
+                    </div>
+                </div>
+                <div class="infoEntryExpand">
+                    <div class="infoDescription">
+                        <div class="infoDescBlock">
+                            <strong>Начало вещания:</strong>
+                            <br>2015 год
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Частоты вещания:</strong>
+                            <br>98.6 FM
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Сегодня радиостанция является одной из ведущих в Донецкой Народной Республике и носит
+                            название «Солдатско&nbsp;радио - Комета».
+                            <br>Полевая почта - программа приветов и поздравлений для военнослужащих и их семей -
+                            остается визитной карточкой станции с первых дней.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Формат вещания:</strong>
+                            <br>Рок и городской романс. Аудитория - взрослые слушатели. В эфире актуальные новости и
+                            тематические интервью.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>radio.dnr@yandex.ru</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты для рекламы:</strong>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="phone icon" class="icon-left">
+                                <strong>+7949 444 44 44</strong>
+                            </div>
+                            <br>
+    <strong>Социальные сети:</strong>
+                            <div class="socialz" style="margin-top: 6px;">
+                                <a href="https://vk.com/public126273901">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="infoEntry radio">
+                <div class="infoMeta">
+                    <div class="infoLogoRadio"><img src="img/rad_briz.png" alt="Первый Республиканский Канал ДНР" class="">
+                    </div>
+                    <div class="infoTextRadio">
+                        <strong>Радио «БРИЗ» Мариуполь</strong>
+
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="radioFocus">
+                        <strong>Формат вещания:</strong>
+                        <br><span>хиты классического и
+                            современного рока, песни
+                            городского романса.
+                            Всегда актуальные новости о
+                            событиях Мариуполя,
+                            Приазовья и всей Республики.</span>
+                    </div>
+                </div>
+                <div class="infoEntryExpand">
+                    <div class="infoDescription">
+                        <div class="infoDescBlock">
+                            <strong>Начало вещания:</strong>
+                            <br>2022 год
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Частоты вещания:</strong>
+                            <br>103.6 FM
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Всегда актуальные новости о событиях Мариуполя, Приазовья и всей Республики - в
+                            прямом
+                            эфире!
+                            Сегодня здесь звучат хиты классического и современного рока, песни городского романса.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>radio.dnr@yandex.ru</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        йа подвал
+    </footer>
+
+
+</body></html>

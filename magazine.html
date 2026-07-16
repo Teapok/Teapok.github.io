@@ -1,0 +1,1494 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>РМХ - Газеты</title>
+    <link rel="icon" type="icon-x" href="img/favicon.ico" />
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">
+        function toggleEntry(element) {
+            const parentEntry = element.closest('.infoEntry');
+            if (parentEntry) {
+                parentEntry.classList.toggle('entryOpen');
+
+                if (parentEntry.classList.contains('entryOpen')) {
+                    setTimeout(() => {
+                        const rect = parentEntry.getBoundingClientRect();
+                        window.scrollBy({
+                            top: rect.top - 20,
+                            behavior: 'smooth'
+                        });
+                    }, 250);
+                }
+            }
+        }
+
+        function getParameterByName(name) {
+            const url = window.location.href;
+            const params = new URLSearchParams(new URL(url).search);
+            return params.get(name);
+        }
+
+        function expandBlockByIndex(index) {
+
+            const moreButtons = document.querySelectorAll('.infoMore');
+
+            if (moreButtons[index]) {
+                moreButtons[index].click();
+                return true;
+            }
+            return false;
+        }
+
+        function expandFromUrl(paramName = 'expand') {
+            const paramValue = getParameterByName(paramName);
+
+            if (paramValue !== null) {
+
+                const index = parseInt(paramValue);
+
+                if (!isNaN(index)) {
+
+                    if (document.readyState === 'complete') {
+                        expandBlockByIndex(index);
+                    } else {
+                        window.addEventListener('load', function () {
+                            expandBlockByIndex(index);
+                        });
+                    }
+                }
+            }
+        }
+
+        expandFromUrl();
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upGos">Государственное унитарное предприятие Донецкой Народной Республики «Республиканский меди
+            холдинг» (ГУП ДНР «РМХ») — официальный сайт</div>
+        <div class="Header">
+            <a class="headelement" href="index.html">Главная</a>
+            <div class="separator"></div>
+            <div class="headelement">Вакансии</div>
+            <div class="separator"></div>
+            <a class="headelement" href="advert.html">Рекламодателям</a>
+            <div class="separator"></div>
+            <div class="headelement">Контакты</div>
+            <div class="filler"></div>
+        </div>
+        <div class="logoBlock">
+            <div class="logoGrand">
+                <img src="img/logoRmx.png">
+            </div>
+            <div class="longButtons">
+                <a class="longButton" href="tv.html">ТВ</a>
+                <div class="longButton active">Газеты</div>
+                <a class="longButton" href="radio.html">Радио</a>
+                <a class="longButton" href="network.html">Сетевые издания</a>
+            </div>
+        </div>
+        <div class="infoWrapper">
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_znamya.png" alt="Боевое Знамя"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Боевое Знамя Донбасса»</span>
+                        <strong style="position: relative;top: -46%;">Первый номер вышел <br> 13
+                            ноября 2014 года</strong>
+                        <strong style="line-height: normal;">
+                            «Боевое Знамя Донбасса» — фронтовая газета, созданная 13 ноября 2014 года как периодическое
+                            издание 1-го Донецкого армейского корпуса Вооружённых Сил Донецкой Народной Республики.
+                        </strong>
+                    </div>
+                    <span class="magazine">
+                        фронтовая газета, созданная 13 ноября 2014 года как периодическое издание 1-го Донецкого
+                        армейского корпуса Вооружённых Сил Донецкой Народной Республики.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0; overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ТРУБЕЦКИЙ<br>Андрей<br>Олегович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -55px;position: relative;">
+                        <div class="infoDescBlock">
+                            Её история неразрывно связана с героической ратной летописью Донбасса. Вместе с боевыми
+                            частями и соединениями издание прошло фронтовыми дорогами Углегорска и Дебальцево, стойко
+                            держало оборону под Коминтерново и Саханкой, участвовало в наступательных операциях на
+                            Донецком и Запорожском направлениях.
+                            <br><br>
+                            В 2023 году газета получила новое художественно-техническое оформление и идейно-тематическое
+                            содержание, что позволило ей выйти на качественно новый уровень. Сегодня «Боевое Знамя
+                            Донбасса» — это не просто газета, а настоящая «окопная правда» специальной военной операции,
+                            востребованное и авторитетное издание среди военнослужащих и их семей.
+                            <br><br>
+                            В условиях активного применения современных технических средств на поле боя, отсутствия
+                            возможности пользоваться интернетом и мобильной связью, печатные СМИ выходят на первый план.
+                            Газета стала незаменимым спутником и другом каждого защитника Отечества.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <strong>Главный редактор</strong> – Трубецкий Андрей Олегович
+                            <br>• Ветеран боевых действий
+                            <br>• Финалист конкурса управленцев «Донбасс. СВОи герои»
+                            <br>• Член союза журналистов России
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>lirnev@mail.ru</strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 679-11-30</strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 318-92-26</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_dontime.svg" alt="Донецкое время"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Донецкое время»</span>
+                        <strong style="position: relative;top: -38%;">Создана в <br> сентябре 2015 года.</strong>
+                        <strong style="line-height: normal;">
+                            Еженедельная газета «Донецкое время» <br>создана в сентябре 2015 года.
+                        </strong>
+                        <a class="link" href="https://dontimes.ru" style="height: 20px;"><strong
+                                style="display: block;">https://dontimes.ru</strong></a>
+                    </div>
+                    <span class="magazine">
+                        До 2020 года выходила в объеме 32 полос, в январе 2020-го издание было переведено в электронный
+                        формат.
+                        <br>
+                        2021-го возобновлен выпуск печатного еженедельника.</span>
+                </div>
+                <div class="infoEntryExpand" style="margin-top: -30px; padding-top: 0; overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">КАРПЕНКО<br>Роман<br>Васильевич</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px; position: relative;">
+                        <div class="infoDescBlock">
+                            До 2020 года выходила в объеме 32 полос, в январе 2020-го издание было переведено в
+                            электронный формат, однако с 2021-го возобновлен выпуск печатного еженедельника в объеме 8
+                            полос. С 2025 года формат увеличен до 12 полос.
+                            <br><br>
+                            «Донецкое время» – республиканское общественно-политическое издание. В его повестке –
+                            восстановление и развитие региона, культура, спорт, образование, работа социальных служб.
+                            Немало внимания уделяется патриотической и историко-краеведческой тематике.
+                            <br><br>
+                            Важным этапом в истории газеты стала реализация грантового проекта «И мы сохраним тебя,
+                            русская речь!..», посвященного проблемным вопросам функционирования современного русского
+                            языка в России и странах ближнего зарубежья. <br>
+                            В 2026 году проект получил признание и стал
+                            победителем международного конкурса «Говорим, пишем, думаем по-русски!», проведенного Союзом
+                            журналистов Москвы.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_rabochi2.png" alt="Макеевский рабочий ДНР"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Макеевский рабочий ДНР»</span>
+                        <strong>Газета создана<br>15 сентября 1930 года</strong>
+                        <strong style="line-height: normal;">Газета «Макеевский рабочий»<br>была создана 15 сентября
+                            1930 года и является одним из старейших печатных периодических изданий на территории бывшего
+                            Советского Союза и современной России.</strong>
+
+                        <div class="socials">
+
+                            <a href="https://vk.com/mr_dnr">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="margin-left: 41px;">Газета является одним из старейших печатных
+                        периодических изданий на территории бывшего Советского Союза и современной России. </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ЕВТУШЕНКО<br>Владислав<br>Александрович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">За всё время работы газета приостанавливала выпуск лишь в период
+                            немецкой оккупации Макеевки в 1941–1943 годах и на несколько месяцев в ходе боевых действий
+                            в 2014 году. <br><br>С 2015 года и по сегодняшний день газета под названием «Макеевский
+                            рабочий ДНР» выходит на 24 полосах, один раз в неделю, по средам. На данным момент издание
+                            входит в состав ГУП ДНР «РМХ». Распространяется через сеть отделений «Почты Донбасса», а
+                            также в розничной продаже.<br><br>
+                            В газете публикуются материалы на самые разные темы, от общественно-политических до
+                            молодёжных и развлекательных. На страницах постоянно печатаются эксклюзивные интервью с
+                            интересными личностями, репортажи с места событий, аналитика, очерки о ярких современниках.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            Основные рубрики: «Эпицентр недели», «На темы дня», «Актуально», «Жизнь города», «Военные
+                            заметки», «Миссия выполнима», «История», «Промышленность», «Будь здоров!» и «Юридическая
+                            консультация».
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            Поскольку редакция «Макеевского рабочего ДНР» стремится к тому, чтобы газета была интересна
+                            для людей разных поколений и профессий, в ней еженедельно публикуется рецепты и полезные
+                            советы, афиши интересных событий, театральных премьер и программы ТВ.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 317-95-56</strong>
+                            </div>
+                            <br><strong>Отдел рекламы и подписки:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>22-13-36</strong>
+                            </div>
+                            <br><strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/mr_dnr">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_rodina.svg" alt="Родина ДНР"
+                                style="margin-left: -25px;margin-right: -10px;margin-top: -70px;scale: 6;pointer-events: none;">
+                        </div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Родина (ДНР)»</span>
+                        <strong>Газета создана <br> 22 сентября 1936 года.</strong>
+                        <strong style="line-height: normal;">Газета «Родина (ДНР)»<br>создана 22 сентября 1936 года. Это
+                            одно из старейших печатных изданий Донбасса, которое в сентябре 2026 года отпразднует своё
+                            90-летие.</strong>
+                        <div class="socials">
+                            <a href="https://vk.com/gazetarodina">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="font-size: 17px;margin-top: -2px;">Одно из старейших печатных изданий
+                        Донбасса,
+                        также самое востребованное СМИ в Харцызском и Иловайском округах,
+                        сохраняет один из самых высоких тиражей среди печатных изданий Республики.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ВОРОНКОВА<br>Марина<br>Сергеевна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">За это время она меняла названия, учредителей, количество полос и
+                            выходов в неделю, оставаясь не только самым востребованным СМИ в Харцызском и Иловайском
+                            округах, но и сохраняя один из самых высоких тиражей среди печатных изданий
+                            Республики.<br><br>Основное направление контента – информационно-развлекательное. За свою
+                            многолетнюю историю «Родина (ДНР)» стала настоящим зеркалом тех событий, свидетелями которых
+                            ежедневно становятся её читатели: с окружающими их трудностями, достижениями, чаяниями.
+                            Удовлетворение их интересов, способность вникнуть и, по возможности, помочь решить их
+                            проблемы, отметить даже самые скромные успехи и победы читателей – задача, ежедневно стоящая
+                            перед сотрудниками редакции, и которую они успешно реализовывают параллельно с подачей общей
+                            информации/новостей из жизни округа. <br><br>Именно тесная связь с читателями, их доверие к
+                            газете, даже в условиях ухода преобладающего числа населения в мировую паутину в поисках
+                            информации, позволяют «Родине» не сдавать позиции на рынке средств массовой информации.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Сотрудники редакции были многократно отмечены грамотами и благодарственными письмами за
+                            качественное и профессиональное исполнение своих обязанностей, в том числе и в конкурсах
+                            творческого мастерства работников СМИ ДНР и России в целом.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>На сегодняшний день газета выходит один раз в неделю, по четвергам, форматом А3 на 24
+                            страницах.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции и рекламы:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (856) 547-55-44</strong>
+                            </div>
+                            <br><strong>Адрес:</strong>
+                            <br>
+                            ДНР, г. Харцызск, ул. Вокзальная, 70.<br><br>
+                            <strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/gazetarodina">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_kochegar.svg" alt="Кочегарка"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Кочегарка (ДНР)»</span>
+                        <strong>Первый выпуск<br>в Луганске<br> 1 февраля 1919 г.</strong>
+                        <strong style="line-height: normal;">Газета «Кочегарка (ДНР)»<br>В нынешнем формате «Кочегарка
+                            (ДНР)» издается с апреля 2015 года, являясь преемницей одной из старейших газет Донбасса.
+                        </strong>
+                        <div class="socials">
+                            <a href="https://vk.com/kochegarka_dnr">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine">В нынешнем формате «Кочегарка (ДНР)» издается с апреля 2015 года, являясь
+                        преемницей одной из старейших газет Донбасса.
+                        Сегодня «Кочегарка» – популярная городская газета.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ВОРОНКОВА<br>Марина<br>Сергеевна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -76px;">
+                        <div class="infoDescBlock">Первый номер газеты, печатного органа Бахмутского и Луганского
+                            комитетов КП (б) Украины, вышел в Луганске 1 февраля 1919 г. под названием «Совет
+                            коммунистов». Но уже в конце февраля 1919 г. постановлением Донецко-Криворожского областного
+                            комитета КП(б)У газета была переименована в «Донецко-Криворожский коммунист». <br><br>С 18
+                            июля 1920 г. она выходит под названием «Всероссийская кочегарка», при этом продолжая год
+                            издания и валовую нумерацию газеты «Донецко-Криворожский коммунист».<br><br>С 10 декабря
+                            1920 г. «Всероссийская кочегарка» издается в Бахмуте (ныне Артемовск) как орган Донецкого
+                            губисполкома, губпарткома, бюро ЦК Всероссийского союза горнорабочих и центрального
+                            правления каменноугольной промышленности Донбасса.
+                            <br><br>
+                            Резолюцией общего собрания трудящихся Горловского Госрудника в сентябре 1924г. газета
+                            «Всероссийская кочегарка» признана массовой рабочей газетой Донбасса, освещающей рабочую
+                            жизнь, ход производства Донбасса, международные события. С июля 1925 г. газета начинает
+                            выходить под своим нынешним названием – «Кочегарка».
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>В различные периоды «Кочегарка» выходила специальными выпусками на важнейших участках и
+                            стройках Донбасса под названиями: «Кочегарка» на хлебозаготовках», «Кочегарка» у
+                            доломитчиков», «Кочегарка» на строительстве азотно-тукового завода».<br><br>Выездные
+                            редакции работали на шахтах 1-3 «Кочегарка», №5 им. Ленина, на стройке шахты им. Румянцева и
+                            др.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Издание освещает важные события во всех сферах общественной и социальной жизни Горловки,
+                            Донецкой Народной Республики: в сфере здравоохранения, образования, культуры, спорта, ЖКХ.
+                            Публикуются материалы, посвященные помощи шефа-региона Кемеровской области (Кузбасс) в
+                            восстановлении и строительстве инфраструктуры города.
+                            <br><br>Регулярно размещаются материалы об участии городского округа в общероссийских и
+                            республиканских проектах по социально-экономическому развитию, о работе молодежных
+                            общественных движений.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>На страницах газеты особое внимание уделяется репортажам с места событий, очеркам о
+                            ветеранах ополчения, участниках СВО, волонтерах. Рассказывается о тружениках, оставшихся в
+                            городе под обстрелами, о судьбах горожан, о культурной жизни города, людях, внесших
+                            неоценимый вклад в его развитие. <br><br>Продолжая традиции, возобновлена поэтическая
+                            страница «Кочегарка литературная», где публикуются лучшие произведения горловских авторов.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Phone icon" class="icon-left">
+                                <strong>Ko4egarka.dnr@yandex.ru</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты рекламного отдела:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 098-08-69 </strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/kochegarka_dnr">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_vecher.svg"
+                                style="left: -5;scale: 1.123;position: relative;" alt="Донецк Вечерний"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Донецк вечерний»</span>
+                        <strong style="position: relative;top: -46%;">Первый номер вышел<br>30 сентября 2015
+                            года</strong>
+                        <strong style="line-height: normal;">Первый номер издания вышел в свет 30 сентября 2015
+                            года</strong>
+                    </div>
+                    <span class="magazine">Сфера деятельности: информационно-развлекательное периодическое печатное
+                        издание, реклама.
+                    </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0; overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">КОЛОС<br>Сергей <br>Викторович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -125px;position: relative;">
+                        <div class="infoDescBlock">Сфера деятельности: информационно-развлекательное периодическое
+                            печатное издание, реклама в соответствии с законодательством Российской Федерации о
+                            рекламе.<br><br>Достижения: благодарность от Главы ДНР Дениса Пушилина, почетные грамоты от
+                            Министерства информации ДНР, Футбольного союза, Федерации баскетбола, волейбола, футзала
+                            ДНР, Всероссийской федерации волейбола<br><br>
+                            В условиях активного применения современных технических средств на поле боя, отсутствия
+                            возможности пользоваться интернетом и мобильной связью, печатные СМИ выходят на первый план.
+                            Газета стала незаменимым спутником и другом каждого защитника Отечества.
+                            <br><br><strong>Адрес учредителя, издателя и редакции:</strong>
+                            <br>
+                            РФ, Донецкая Народная Республика, г.о. Донецк, г. Донецк, пл. Советская, д. 1.<br>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>don.gazeta@rmh-dnr.ru</strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 321-68-80</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты для рекламы:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 441-31-06</strong>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_rodnoe.svg" alt="Родное Приазовье"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Родное Приазовье»</span>
+                        <strong>Первый номер вышел<br>31 марта 1935 года</strong>
+                        <strong style="line-height: normal;">Газета «Родное Приазовье»<br>единственное официальное
+                            средство массовой информации Новоазовского муниципального округа. </strong>
+                        <div class="socials">
+                            <a href="https://vk.ru/rpnovoazovsk">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://max.ru/join/ugnXsXP41yZUS6md7NFWJ4N87G1uVYC3azjeurQXqZw">
+                                <svg class="icon-social" viewBox="0 0 31.15 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                    </path>
+                                    <g class="layer-fg">
+                                        <path
+                                            d="M15.85,27.39c-2.34,0-3.43-.34-5.31-1.71-1.2,1.54-4.98,2.74-5.14.68,0-1.54-.34-2.85-.73-4.27-.46-1.75-.98-3.7-.98-6.53,0-6.75,5.54-11.84,12.11-11.84s11.72,5.33,11.72,11.9c.02,6.47-5.19,11.73-11.66,11.76M15.94,9.56c-3.2-.17-5.69,2.05-6.24,5.52-.46,2.87.35,6.37,1.04,6.56.33.08,1.16-.59,1.68-1.11.86.59,1.85.95,2.89,1.03,3.31.16,6.15-2.36,6.37-5.67.13-3.32-2.42-6.13-5.74-6.32h0Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine">Газета «Родное Приазовье» - единственное официальное средство массовой
+                        информации Новоазовского муниципального округа. </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ЭККЕРТ <br>Марина <br>Михайловна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -76px;">
+                        <div class="infoDescBlock">Первый номер газеты вышел в свет 31 марта 1935 года.<br>
+                            На страницах печатного издания отражены все самые важные происходящие события не только в
+                            Новоазовском округе, но и в Донецкой Народной Республике в целом. <br><br>Информация органов
+                            местного самоуправления, актуальные проблемы округа, новости, зарисовки и очерки о людях,
+                            жизни в прифронтовых селах, рекламные объявления — вот лишь краткий перечень того, о чем
+                            пишет «Родное Приазовье» сегодня.<br><br>Газета выходит 1 раз в неделю, по четвергам, тираж
+                            – 1100 экземпляров.</div>
+                        <div class="infoDescBlock">
+                            <br><strong>Адрес редакции:</strong>
+                            <br><br>287600, Донецкая Народная Республика, г. Новоазовск,<br>ул. Кирова, д. 77.
+                            <br>
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Phone icon" class="icon-left">
+                                <strong>rp.novoazovsk@mai.ru</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7(856-96) 321-44</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Социальные сети:</strong>
+                            <br><br>
+                            <div class="socialz">
+                                <a href="https://vk.ru/rpnovoazovsk">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://max.ru/join/ugnXsXP41yZUS6md7NFWJ4N87G1uVYC3azjeurQXqZw">
+                                    <svg class="icon-social" viewBox="0 0 31.15 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                        </path>
+                                        <g class="layer-fg">
+                                            <path
+                                                d="M15.85,27.39c-2.34,0-3.43-.34-5.31-1.71-1.2,1.54-4.98,2.74-5.14.68,0-1.54-.34-2.85-.73-4.27-.46-1.75-.98-3.7-.98-6.53,0-6.75,5.54-11.84,12.11-11.84s11.72,5.33,11.72,11.9c.02,6.47-5.19,11.73-11.66,11.76M15.94,9.56c-3.2-.17-5.69,2.05-6.24,5.52-.46,2.87.35,6.37,1.04,6.56.33.08,1.16-.59,1.68-1.11.86.59,1.85.95,2.89,1.03,3.31.16,6.15-2.36,6.37-5.67.13-3.32-2.42-6.13-5.74-6.32h0Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_snejn.svg" alt="Снежнянские Новости"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Снежнянские новости»</span><strong>Первый номер вышел<br>19 декабря 2014 года
+                        </strong><strong style="line-height: normal;">Городская еженедельная газета «Снежнянские
+                            новости» выходит с 19 декабря 2014 года.<br></strong><br>
+                    </div>
+                    <span class="magazine">Начало своей истории издание ведет с первого номера газеты «Ленинская
+                        правда», который вышел в свет 15 сентября 1930 года. </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ДОНЕЦ<br>Виктор<br>Дмитриевич</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -98px;">
+                        <div class="infoDescBlock">Газета является основным печатным изданием на территории города
+                            Снежное, на страницах которой размещается информация о жизни города и Донецкой Народной
+                            Республики: <br>публикуются материалы о деятельности Главы Республики, освещается
+                            деятельность администрации городского округа, работа местных предприятий, культурные и
+                            спортивные события, актуальные вопросы жизнедеятельности, обзор патриотических мероприятий,
+                            страницы истории города, юридические консультации, познавательно-развлекательные материалы,
+                            а также объявления, реклама.
+                            <br><br>Начало своей истории издание ведет с первого номера газеты «Ленинская правда»,
+                            который вышел в свет 15 сентября 1930 года. Позже она была преобразована в городскую
+                            общественно-политическую газету «Снежнянская жизнь», последний номер которой вышел 3 мая
+                            2014 года. На смену ей пришли «Снежнянские новости».<br><br>Работа коллектива редакции
+                            отмечена Благодарностью Донецкого регионального отделения политической партии «Единая
+                            Россия» и Почетной грамотой Главы ДНР Дениса Пушилина.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Адрес редакции:</strong>
+                            <br><br>286500, ДНР, г. Снежное, ул. Дзержинского, 2.<br>
+                            <br><strong>Контакты редакции:</strong>
+                            <br>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 390-71-87</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты рекламного отдела:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 327-88-39</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_newlife.svg" alt="Новая Жизнь"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Новая жизнь (ДНР)»</span>
+                        <strong>Первый номер вышел<br>13 января 1932 года</strong>
+                        <strong style="line-height: normal;">Газета «Новая жизнь (ДНР)»<br>Первый номер газеты вышел в
+                            свет 13 января 1932 года. На страницах издания освещаются события Донецкой Народной
+                            Республики и Старобешевского муниципального округа.</strong>
+                        <div class="socials">
+                            <a href="https://vk.com/novazhizndnr">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://ok.ru/group/70000003359118">
+                                <svg class="icon-social" viewBox="0 0 31.15 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                    </path>
+                                    <g class="layer-fg">
+                                        <path
+                                            d="m 20.381901,26.065142 c 1.014179,-0.271371 1.507039,-1.376703 1.035636,-2.322607 -0.119396,-0.239578 -0.170028,-0.293538 -1.797954,-1.916119 -1.055343,-1.05188 -1.659034,-1.674647 -1.63168,-1.683236 0.02389,-0.0075 0.248876,-0.07041 0.499988,-0.139803 0.996903,-0.275484 2.19215,-0.813061 2.869343,-1.290523 0.215603,-0.152013 0.456466,-0.465851 0.551795,-0.718977 0.120305,-0.319442 0.135092,-0.73241 0.038,-1.061454 -0.141684,-0.480201 -0.561634,-0.905361 -1.063977,-1.077174 -0.16542,-0.05657 -0.263629,-0.0691 -0.523239,-0.06678 -0.38248,0.0035 -0.551304,0.05561 -0.958794,0.296247 -0.879286,0.519263 -1.72704,0.815392 -2.785063,0.97285 -0.522613,0.07778 -1.4379,0.07015 -1.993678,-0.0166 -0.983978,-0.153595 -1.887956,-0.476352 -2.703967,-0.965425 -0.596194,-0.357326 -1.14083,-0.395721 -1.696182,-0.119574 -0.5601336,0.278522 -0.8931906,0.818052 -0.8931906,1.446903 0,0.404661 0.1142148,0.723693 0.3775895,1.05471 0.3766921,0.473438 2.0783501,1.286351 3.3710301,1.610403 0.154852,0.03882 0.281549,0.08401 0.281549,0.100414 0,0.0164 -0.751709,0.778637 -1.670463,1.693842 -1.605722,1.599519 -1.674642,1.672801 -1.7782687,1.890803 -0.1376543,0.289587 -0.1861787,0.540358 -0.1655417,0.855516 0.041943,0.640482 0.4673524,1.200491 1.0751694,1.415348 0.255065,0.09017 0.697251,0.110098 0.956336,0.04311 0.436303,-0.112804 0.432197,-0.109327 2.2297,-1.887995 l 1.6666,-1.649138 1.666345,1.651755 c 1.795504,1.779785 1.787491,1.772982 2.22041,1.885005 0.21556,0.05578 0.611108,0.05506 0.822499,-0.0015 z M 16.457893,15.48189 c 0.671802,-0.104257 1.108739,-0.242247 1.72562,-0.544974 0.898935,-0.441141 1.616042,-1.064428 2.172706,-1.888445 0.556158,-0.82327 0.857788,-1.687169 0.951915,-2.726382 C 21.407494,9.2250831 21.092599,7.9442879 20.484393,6.9716316 19.65867,5.6511194 18.343075,4.7331075 16.815925,4.4118031 16.361173,4.3161256 15.47072,4.2806327 14.971534,4.3382863 c -1.848142,0.2134536 -3.507742,1.3835451 -4.361725,3.0752078 -0.7954286,1.5756728 -0.7915145,3.4427609 0.01054,5.0301979 0.828442,1.63965 2.41484,2.769592 4.26456,3.037512 0.390529,0.05656 1.210602,0.05692 1.572981,6.86e-4 z M 15.10655,12.20208 c -1.524947,-0.381161 -2.265904,-2.079598 -1.501748,-3.4423381 0.153984,-0.2746027 0.486552,-0.626747 0.766559,-0.8116781 0.967835,-0.63921 2.261682,-0.4738419 3.050583,0.3898984 0.644226,0.7053406 0.798877,1.7091898 0.394523,2.5608618 -0.317076,0.66784 -0.85726,1.116468 -1.566385,1.300897 -0.316104,0.08222 -0.8199,0.08325 -1.143532,0.0023 z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="/*! font-size: 17px; */margin-top: -2px;">На страницах издания
+                        освещаются события Донецкой Народной Республики и Старобешевского муниципального округа.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ОСТАПОВА<br>Юлия <br>Николаевна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">Публикуются материалы о восстановлении объектов инфраструктуры, в том
+                            числе при поддержке регионов-шефов – Республики Бурятия и Забайкальского края, о
+                            деятельности органов власти, предприятий, рассказывается о людях труда, знаменитых земляках,
+                            спортсменах, достижениях в различных сферах.<br><br>Регулярно размещаются статьи об участии
+                            Старобешевского муниципального округа в федеральных и региональных проектах по
+                            социально-экономическому развитию населенных пунктов.<br><br>Также большое внимание
+                            уделяется теме патриотизма, рассказам об участниках СВО, Великой Отечественной и других
+                            войн.</div>
+                        <div class="infoDescBlock">
+                            <br>На страницах издания публикуются и познавательные, развлекательные материалы.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Газета принимала участие в грантовых проектах Минцифры: в 2024 году – по теме «Сельское
+                            хозяйство», в 2025 году – «Культурные ценности».
+                        </div>
+                        <div class="infoDescBlock">
+                            <br>Коллектив и сотрудники редакции неоднократно удостаивались Благодарностей за
+                            плодотворный труд от администрации Старобешевского муниципального округа, Министерства
+                            информации ДНР, Главы ДНР.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="mail icon">
+                                <strong>novaya_zhizn_18@mail.ru</strong>
+                            </div><br>
+                            <div class="iconText">
+                                <img class="icon-left" alt="Phone icon" src="img/svg_phone.svg">
+                                <strong>+7 (856) 532-25-67</strong>
+                            </div>
+                            <br>
+                            <strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/novazhizndnr">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://ok.ru/group/70000003359118">
+                                    <svg class="icon-social" viewBox="0 0 31.15 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                        </path>
+                                        <g class="layer-fg">
+                                            <path
+                                                d="m 20.381901,26.065142 c 1.014179,-0.271371 1.507039,-1.376703 1.035636,-2.322607 -0.119396,-0.239578 -0.170028,-0.293538 -1.797954,-1.916119 -1.055343,-1.05188 -1.659034,-1.674647 -1.63168,-1.683236 0.02389,-0.0075 0.248876,-0.07041 0.499988,-0.139803 0.996903,-0.275484 2.19215,-0.813061 2.869343,-1.290523 0.215603,-0.152013 0.456466,-0.465851 0.551795,-0.718977 0.120305,-0.319442 0.135092,-0.73241 0.038,-1.061454 -0.141684,-0.480201 -0.561634,-0.905361 -1.063977,-1.077174 -0.16542,-0.05657 -0.263629,-0.0691 -0.523239,-0.06678 -0.38248,0.0035 -0.551304,0.05561 -0.958794,0.296247 -0.879286,0.519263 -1.72704,0.815392 -2.785063,0.97285 -0.522613,0.07778 -1.4379,0.07015 -1.993678,-0.0166 -0.983978,-0.153595 -1.887956,-0.476352 -2.703967,-0.965425 -0.596194,-0.357326 -1.14083,-0.395721 -1.696182,-0.119574 -0.5601336,0.278522 -0.8931906,0.818052 -0.8931906,1.446903 0,0.404661 0.1142148,0.723693 0.3775895,1.05471 0.3766921,0.473438 2.0783501,1.286351 3.3710301,1.610403 0.154852,0.03882 0.281549,0.08401 0.281549,0.100414 0,0.0164 -0.751709,0.778637 -1.670463,1.693842 -1.605722,1.599519 -1.674642,1.672801 -1.7782687,1.890803 -0.1376543,0.289587 -0.1861787,0.540358 -0.1655417,0.855516 0.041943,0.640482 0.4673524,1.200491 1.0751694,1.415348 0.255065,0.09017 0.697251,0.110098 0.956336,0.04311 0.436303,-0.112804 0.432197,-0.109327 2.2297,-1.887995 l 1.6666,-1.649138 1.666345,1.651755 c 1.795504,1.779785 1.787491,1.772982 2.22041,1.885005 0.21556,0.05578 0.611108,0.05506 0.822499,-0.0015 z M 16.457893,15.48189 c 0.671802,-0.104257 1.108739,-0.242247 1.72562,-0.544974 0.898935,-0.441141 1.616042,-1.064428 2.172706,-1.888445 0.556158,-0.82327 0.857788,-1.687169 0.951915,-2.726382 C 21.407494,9.2250831 21.092599,7.9442879 20.484393,6.9716316 19.65867,5.6511194 18.343075,4.7331075 16.815925,4.4118031 16.361173,4.3161256 15.47072,4.2806327 14.971534,4.3382863 c -1.848142,0.2134536 -3.507742,1.3835451 -4.361725,3.0752078 -0.7954286,1.5756728 -0.7915145,3.4427609 0.01054,5.0301979 0.828442,1.63965 2.41484,2.769592 4.26456,3.037512 0.390529,0.05656 1.210602,0.05692 1.572981,6.86e-4 z M 15.10655,12.20208 c -1.524947,-0.381161 -2.265904,-2.079598 -1.501748,-3.4423381 0.153984,-0.2746027 0.486552,-0.626747 0.766559,-0.8116781 0.967835,-0.63921 2.261682,-0.4738419 3.050583,0.3898984 0.644226,0.7053406 0.798877,1.7091898 0.394523,2.5608618 -0.317076,0.66784 -0.85726,1.116468 -1.566385,1.300897 -0.316104,0.08222 -0.8199,0.08325 -1.143532,0.0023 z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -30px; margin-right: 13px;" src="img/mag_ray.svg"
+                                alt="Новый Луч"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Новый луч»</span>
+                        <strong>Первый номер вышел<br>14 февраля 2015 года</strong>
+                        <strong style="line-height: normal;">Газета «Новый Луч»<br>Это официальное средство массовой
+                            информации Амвросиевского муниципального округа.</strong>
+                        <div class="socials">
+                            <a href="https://vk.com/novluch_amvr">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://ok.ru/gazetanovy">
+                                <svg class="icon-social" viewBox="0 0 31.15 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                    </path>
+                                    <g class="layer-fg">
+
+                                        <path
+                                            d="m 20.381901,26.065142 c 1.014179,-0.271371 1.507039,-1.376703 1.035636,-2.322607 -0.119396,-0.239578 -0.170028,-0.293538 -1.797954,-1.916119 -1.055343,-1.05188 -1.659034,-1.674647 -1.63168,-1.683236 0.02389,-0.0075 0.248876,-0.07041 0.499988,-0.139803 0.996903,-0.275484 2.19215,-0.813061 2.869343,-1.290523 0.215603,-0.152013 0.456466,-0.465851 0.551795,-0.718977 0.120305,-0.319442 0.135092,-0.73241 0.038,-1.061454 -0.141684,-0.480201 -0.561634,-0.905361 -1.063977,-1.077174 -0.16542,-0.05657 -0.263629,-0.0691 -0.523239,-0.06678 -0.38248,0.0035 -0.551304,0.05561 -0.958794,0.296247 -0.879286,0.519263 -1.72704,0.815392 -2.785063,0.97285 -0.522613,0.07778 -1.4379,0.07015 -1.993678,-0.0166 -0.983978,-0.153595 -1.887956,-0.476352 -2.703967,-0.965425 -0.596194,-0.357326 -1.14083,-0.395721 -1.696182,-0.119574 -0.5601336,0.278522 -0.8931906,0.818052 -0.8931906,1.446903 0,0.404661 0.1142148,0.723693 0.3775895,1.05471 0.3766921,0.473438 2.0783501,1.286351 3.3710301,1.610403 0.154852,0.03882 0.281549,0.08401 0.281549,0.100414 0,0.0164 -0.751709,0.778637 -1.670463,1.693842 -1.605722,1.599519 -1.674642,1.672801 -1.7782687,1.890803 -0.1376543,0.289587 -0.1861787,0.540358 -0.1655417,0.855516 0.041943,0.640482 0.4673524,1.200491 1.0751694,1.415348 0.255065,0.09017 0.697251,0.110098 0.956336,0.04311 0.436303,-0.112804 0.432197,-0.109327 2.2297,-1.887995 l 1.6666,-1.649138 1.666345,1.651755 c 1.795504,1.779785 1.787491,1.772982 2.22041,1.885005 0.21556,0.05578 0.611108,0.05506 0.822499,-0.0015 z M 16.457893,15.48189 c 0.671802,-0.104257 1.108739,-0.242247 1.72562,-0.544974 0.898935,-0.441141 1.616042,-1.064428 2.172706,-1.888445 0.556158,-0.82327 0.857788,-1.687169 0.951915,-2.726382 C 21.407494,9.2250831 21.092599,7.9442879 20.484393,6.9716316 19.65867,5.6511194 18.343075,4.7331075 16.815925,4.4118031 16.361173,4.3161256 15.47072,4.2806327 14.971534,4.3382863 c -1.848142,0.2134536 -3.507742,1.3835451 -4.361725,3.0752078 -0.7954286,1.5756728 -0.7915145,3.4427609 0.01054,5.0301979 0.828442,1.63965 2.41484,2.769592 4.26456,3.037512 0.390529,0.05656 1.210602,0.05692 1.572981,6.86e-4 z M 15.10655,12.20208 c -1.524947,-0.381161 -2.265904,-2.079598 -1.501748,-3.4423381 0.153984,-0.2746027 0.486552,-0.626747 0.766559,-0.8116781 0.967835,-0.63921 2.261682,-0.4738419 3.050583,0.3898984 0.644226,0.7053406 0.798877,1.7091898 0.394523,2.5608618 -0.317076,0.66784 -0.85726,1.116468 -1.566385,1.300897 -0.316104,0.08222 -0.8199,0.08325 -1.143532,0.0023 z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="/*! font-size: 17px; */margin-top: -2px;">Официальное средство
+                        массовой информации Амвросиевского муниципального округа. Публикации о деятельности предприятий
+                        и организаций, о жителях округа, ветеранах СВО.
+                    </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ГАДЫЕВА<br>Регина<br>Рашитовна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">Газета «Новый Луч» была создана по инициативе руководства
+                            Амвросиевской районной администрации ДНР в конце декабря 2014 года. Первый выпуск вышел в
+                            свет 14 февраля 2015 года. <br><br>Сегодня учредитель издания – Государственное унитарное
+                            предприятие Донецкой Народной Республики «Республиканский медиа-холдинг».<br><br>На
+                            страницах газеты публикуется информация об основных новостях и событиях Амвросиевского
+                            муниципального округа и ДНР. Особое место занимают публикации о деятельности предприятий и
+                            организаций, очерки о жителях округа, ветеранах СВО. </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="mail icon">
+                                <strong>novluch@mail.ru</strong>
+                            </div><br>
+                            <div class="iconText">
+                                <img class="icon-left" alt="Phone icon" src="img/svg_phone.svg">
+                                <strong>+7 (949) 303-04-93</strong>
+                            </div>
+                            <br>
+                            <strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/novluch_amvr">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://ok.ru/gazetanovy">
+                                    <svg class="icon-social" viewBox="0 0 31.15 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0,17.78C0,22.01-.07,26.38,2.36,28.81c2.43,2.43,6.82,2.36,11.04,2.36,3.2,0,7.72.1,10.71-.29,7.08-.93,7.03-6.76,7.03-13.09v-4.3c0-4.21.08-8.67-2.37-11.1-1.14-1.13-2.54-1.72-4.66-2.06-2.84-.45-14.12-.41-17.03-.02C.24,1.25.07,6.34,0,12.84v4.94s0,0,0,0Z">
+                                        </path>
+                                        <g class="layer-fg">
+
+                                            <path
+                                                d="m 20.381901,26.065142 c 1.014179,-0.271371 1.507039,-1.376703 1.035636,-2.322607 -0.119396,-0.239578 -0.170028,-0.293538 -1.797954,-1.916119 -1.055343,-1.05188 -1.659034,-1.674647 -1.63168,-1.683236 0.02389,-0.0075 0.248876,-0.07041 0.499988,-0.139803 0.996903,-0.275484 2.19215,-0.813061 2.869343,-1.290523 0.215603,-0.152013 0.456466,-0.465851 0.551795,-0.718977 0.120305,-0.319442 0.135092,-0.73241 0.038,-1.061454 -0.141684,-0.480201 -0.561634,-0.905361 -1.063977,-1.077174 -0.16542,-0.05657 -0.263629,-0.0691 -0.523239,-0.06678 -0.38248,0.0035 -0.551304,0.05561 -0.958794,0.296247 -0.879286,0.519263 -1.72704,0.815392 -2.785063,0.97285 -0.522613,0.07778 -1.4379,0.07015 -1.993678,-0.0166 -0.983978,-0.153595 -1.887956,-0.476352 -2.703967,-0.965425 -0.596194,-0.357326 -1.14083,-0.395721 -1.696182,-0.119574 -0.5601336,0.278522 -0.8931906,0.818052 -0.8931906,1.446903 0,0.404661 0.1142148,0.723693 0.3775895,1.05471 0.3766921,0.473438 2.0783501,1.286351 3.3710301,1.610403 0.154852,0.03882 0.281549,0.08401 0.281549,0.100414 0,0.0164 -0.751709,0.778637 -1.670463,1.693842 -1.605722,1.599519 -1.674642,1.672801 -1.7782687,1.890803 -0.1376543,0.289587 -0.1861787,0.540358 -0.1655417,0.855516 0.041943,0.640482 0.4673524,1.200491 1.0751694,1.415348 0.255065,0.09017 0.697251,0.110098 0.956336,0.04311 0.436303,-0.112804 0.432197,-0.109327 2.2297,-1.887995 l 1.6666,-1.649138 1.666345,1.651755 c 1.795504,1.779785 1.787491,1.772982 2.22041,1.885005 0.21556,0.05578 0.611108,0.05506 0.822499,-0.0015 z M 16.457893,15.48189 c 0.671802,-0.104257 1.108739,-0.242247 1.72562,-0.544974 0.898935,-0.441141 1.616042,-1.064428 2.172706,-1.888445 0.556158,-0.82327 0.857788,-1.687169 0.951915,-2.726382 C 21.407494,9.2250831 21.092599,7.9442879 20.484393,6.9716316 19.65867,5.6511194 18.343075,4.7331075 16.815925,4.4118031 16.361173,4.3161256 15.47072,4.2806327 14.971534,4.3382863 c -1.848142,0.2134536 -3.507742,1.3835451 -4.361725,3.0752078 -0.7954286,1.5756728 -0.7915145,3.4427609 0.01054,5.0301979 0.828442,1.63965 2.41484,2.769592 4.26456,3.037512 0.390529,0.05656 1.210602,0.05692 1.572981,6.86e-4 z M 15.10655,12.20208 c -1.524947,-0.381161 -2.265904,-2.079598 -1.501748,-3.4423381 0.153984,-0.2746027 0.486552,-0.626747 0.766559,-0.8116781 0.967835,-0.63921 2.261682,-0.4738419 3.050583,0.3898984 0.644226,0.7053406 0.798877,1.7091898 0.394523,2.5608618 -0.317076,0.66784 -0.85726,1.116468 -1.566385,1.300897 -0.316104,0.08222 -0.8199,0.08325 -1.143532,0.0023 z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -20px; margin-right: -3px;" alt="Наше слово"
+                                src="img/mag_nashe.svg"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Наше слово (ДНР)»</span>
+                        <strong>Первый номер вышел<br>в 2022 году</strong>
+                        <strong style="line-height: normal;">Газета «Наше слово (ДНР)»<br>Начала выходить после
+                            освобождения Волновахи и округа от украинских националистов в 2022 году.</strong>
+                        <div class="socials">
+                            <a href="https://vk.com/club221684791">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="font-size: 17px;/*! margin-top: -2px; */">Публикуются заметки о
+                        текущих событиях во всех сферах: общественной и социальной – здравоохранении, образовании,
+                        культуре, спорте и других событиях Волновахского и Докучаевского городских округов.
+                    </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ПАНКОВ<br>Александр <br>Витальевич</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -70px;">
+                        <div class="infoDescBlock">На страницах издания публикуются материалы о восстановлении
+                            Волновахского и Докучаевского округов, как части Донецкой Народной Республике. О помощи
+                            Челябинской области и ЯНАО. <br><br>Регулярно размещаются статьи об участии Волновахского
+                            муниципального и Докучаевского городского округов в общероссийских и республиканских
+                            проектах по социально-экономическому развитию, созданию современной инфраструктуры в
+                            населенных пунктах. Публикуются заметки о текущих событиях во всех сферах: общественной и
+                            социальной – здравоохранении, образовании, культуре, спорте и других.<br><br>Большое
+                            внимание уделяется очеркам о людях труда, рассказам об участниках СВО, деятельности
+                            молодежных движений. </div>
+                        <div class="infoDescBlock"><br>Находят свое место на страницах газеты познавательные,
+                            исторические и развлекательные материалы. <br><br>В апреле 2024 года редакция «Нашего слова
+                            (ДНР)» стала победителем в специальной номинации «Герои новейшего времени» в престижном
+                            конкурсе ямальских СМИ – «Летящий голубь». На конкурс подали заявки 133 участника. </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="mail icon">
+                                <strong>Volnovachaslovo@yandex.ru</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты рекламного отдела:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" alt="Phone icon" src="img/svg_phone.svg">
+                                <strong>+7 (949) 354-91-28 </strong>
+                            </div><br><strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/club221684791">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -20px; margin-right: -3px;"
+                                src="img/mag_priazov.svg" alt="Приазовский рабочий"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Приазовский рабочий»</span>
+                        <strong>Первый номер вышел<br>9 марта 1918 года</strong>
+                        <strong style="line-height: normal;">Газета «Приазовский рабочий»<br>Это еженедельное
+                            общественно-политическое издание. Освещает жизнь Мариуполя и Приазовья – Володарского и
+                            Мангушского округов.
+                        </strong>
+                        <div class="socials">
+                            <a href="https://vk.com/priazovskiy_mrpl">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="">Еженедельное общественно-политическое издание. Освещает жизнь
+                        Мариуполя и Приазовья – Володарского и Мангушского округов.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ПАНКОВ<br>Александр <br>Витальевич</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">Издаётся с 9 марта 1918 года. Под названием «Приазовский рабочий» - с
+                            1937 года. В годы Великой Отечественной войны в период оккупации Мариуполя выпуск газеты
+                            прервался и был восстановлен после освобождения города в 1944 году. <br><br>В феврале 2022
+                            года газета приостанавливала выход в связи с началом проведения СВО. В мае 2022 года
+                            возобновила работу как издание «Республиканского мидиахолдинга» ДНР.<br><br>В настоящее
+                            время выходит на 12 полосах формата АЗ. Информирует о ходе восстановления города и региона,
+                            происходящих событиях в разных сферах (жилищно-коммунальное хозяйство, здравоохранение,
+                            образование, культура, спорт и т.д.) </div>
+                        <div class="infoDescBlock"><br>Публикуются материалы историко-краеведческой и патриотической
+                            тематики. Помимо местных новостей присутствует информация о наиболее важных событиях в
+                            Донецкой Народной Республике. <br><br>В 2025 году коллектив редакции газеты "Приазовский
+                            рабочий" удостоен Почетной грамоты за весомый вклад в реализацию государственной политики в
+                            сфере средств массовой информации, а также в связи с празднованием Дня работников средств
+                            массовой информации и полиграфии ДНР. Награду вручил Глава Донецкой Народной Республики
+                            Денис Пушилин.</div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="mail icon">
+                                <strong>prmrpl@yandex.ru</strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_phone.svg" alt="Phone icon">
+                                <strong>+ 7 (949) 538-64-80</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты отдела рекламы и объявлений:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" alt="Phone icon" src="img/svg_phone.svg">
+                                <strong>+7 (949) 354-91-28</strong>
+                            </div><br>
+                            <div class="iconText">
+                                <img class="icon-left" alt="Phone icon" src="img/svg_phone.svg">
+                                <strong>+7 (949) 714-18-05</strong>
+                            </div><br><strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/priazovskiy_mrpl">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -20px; margin-right: -3px;"
+                                alt="Приазовский рабочий" src="img/mag_torez.svg"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Торезский горняк»</span>
+                        <strong>Первый номер вышел<br>13 октября 2015 года</strong>
+                        <strong style="line-height: normal;">Газета «Торезский горняк»<br>Это одна из старейших в
+                            Донбассе. Издание выходит с 1929 года и по сей день является единственной
+                            общественно-политической газетой в Торезе. </strong>
+                        <div class="socials">
+                            <a href="https://vk.com/public221789385">
+                                <svg class="icon-social" viewBox="0 0 31.18 31.18" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <span class="magazine" style="">Выходила газета и в годы Великой Отечественной войны.<br>Издание
+                        выходит с 1929 года и по сей день является единственной общественно-политической газетой в
+                        Торезе. </span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ХРУСТАЛЁВА<br>Наталия <br>Леонидовна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -50px;">
+                        <div class="infoDescBlock">С 2015 года изменилось название издания – 13 октября 2015 вышел
+                            первый номер городской газеты «Торезский Горняк». <br><br>Газета выходит еженедельно, по
+                            четвергам. Издание информирует читателей о главных событиях в жизни города и округа, держит
+                            руку на пульсе самых свежих новостей, рассказывает о людях труда, талантливых
+                            жителях.<br><br>В настоящее
+                            время выходит на 12 полосах формата АЗ. Информирует о ходе восстановления города и региона,
+                            происходящих событиях в разных сферах (жилищно-коммунальное хозяйство, здравоохранение,
+                            образование, культура, спорт и т.д.) </div>
+                        <div class="infoDescBlock"><br>В прошлом году «Торезский горняк» пережил ребрендинг и изменился
+                            внешне – стал более стильным и современным. Появились новые рубрики, которые пользуются
+                            популярностью у постоянных читателей.<br></div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_phone.svg" alt="Phone icon">
+                                <strong>(062-54) 355-10</strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Социальные сети:</strong>
+                            <br>
+                            <div class="socialz" style="margin-top: 20px;">
+                                <a href="https://vk.com/public221789385">
+                                    <svg class="icon-social" viewBox="0 0 31.18 31.18"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.17,20.38v-9.55C31.17,2.12,29.11.04,20.39.04-.94-.1-.1-.96.04,20.37.04,29.09,2.1,31.16,10.82,31.16h7.24c9.27.16,13.34-.48,13.11-10.78ZM25.17,22.25h-2.27c-.86,0-1.12-.7-2.66-2.24-1.35-1.3-1.91-1.46-2.25-1.46-.47,0-.6.13-.6.78v2.04c0,.55-.18.88-1.62.88-2.4,0-5.04-1.46-6.92-4.15-2.82-3.94-3.58-6.92-3.58-7.52,0-.34.13-.65.78-.65h2.27c.58,0,.79.26,1.02.86.93,3.05,4.12,8.13,4.17,5.2v-3.34c-.1-1.52-.91-1.65-.91-2.2,0-.24.23-.52.58-.52h3.57c.49,0,.65.24.65.83v4.51c.06,1.08.73.66,1.41-.05,1.64-1.82,2.79-4.64,2.79-4.64.15-.34.41-.65.99-.65h2.27c.68,0,.83.34.68.83-.28,1.33-3.05,5.22-3.05,5.24-.24.37-.34.57,0,1.01.65.81,5.42,5.11,2.69,5.25Z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_niva.svg" alt="Новая Нива"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Новая нива (ДНР)»</span><strong>Первый номер вышел<br>1 марта 1935 года</strong><strong
+                            style="line-height: normal;">1 марта 1935 года вышел в печать первый номер Тельмановской
+                            районной газеты. С тех пор газета прочно вошла в жизнь тельмановцев. <br></strong><br>
+                    </div>
+                    <span class="magazine">Главная цель и желание «Новой нивы» – быть любимой газетой жителей
+                        Тельмановского района! И это ей удается.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ЗУБАЧ<br>Наталья<br>Владимировна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -70px;">
+                        <div class="infoDescBlock">Каждое время диктовало свои подходы и темы. За эти годы многое в
+                            районке менялось: внешний вид, тираж, периодичность выхода, журналистский состав, названия –
+                            «Большевик», «Колхозное село», «Путь Октября», «Нива», «Новая Нива», «Новая нива (ДНР)». Но
+                            неизменным было и остается одно – преданность читателю. Газета всегда "шагала" вперед,
+                            невзирая на трудности, финансовые неурядицы, сохраняя лучшие традиции родного Тельмановского
+                            района.
+                            <br><br>Газете всегда везло на способных журналистов, редакторов, определяющих её лицо.
+                            Кто-то из них жив и поныне, но многих уже нет с нами. В ряду тех, кто оставил след в
+                            читательском сознании, – Леонид Пахнев, Владимир Черненко, Юлий Пиперков, Юрий Щербак,
+                            Николай Упорников. Боевыми перьями «районки» в разные годы считались Михаил Паращевин,
+                            Тимофей Чечета, Леонид Сальков, Виктор Волков, Евгений Лефтеров и многие другие. Они были
+                            талантливыми, принципиальными и любимыми читательской аудиторией. Через отдел кадров
+                            районной газеты прошло более двухсот журналистов. Все они внесли свой вклад, частичку своей
+                            души, сердца и сил в то, что сегодня называется – «Новая нива (ДНР)».<br><br>Трудный 2014
+                            год стал очередным испытанием, как для жителей района, так и районной газеты. Но коллективу
+                            редакции, благодаря поддержке читателей, удалось сохранить свою районку. При этом, редакция
+                            шагнула вперед, несмотря на проблемы, оставив черно-белую жизнь в прошлом, «Новая нива»
+                            стала выходить в цветном формате. Раньше об этом только мечтали. <br><br>Как и прежде,
+                            сейчас главная задача газеты – отражение жизни Тельмановского муниципального округа, людей,
+                            которые здесь живут, объективно и оперативно информировать читателей о происходящих событиях
+                            в муниципалитете и Республике. <br><br>Ныне во главе коллектива главный редактор газеты
+                            Наталья Владимировна Зубач. Награждена Почетной грамотой Главы Республики, нагрудным знаком
+                            «Почетный работник средств массовой информации Донецкой Народной Республики».
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Адрес редакции:</strong>
+                            <br><br>пгт Тельманово, пр. Тельмана, 1. <br>
+                            <br><strong>Контакты редакции:</strong>
+                            <br>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (856-79) 511-67 </strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="Mail icon">
+                                <strong>new_niva2015@mail.ru</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_yasinovat.svg" alt="Ясиноватский вестник"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Ясиноватский вестник»</span><strong>Первый номер вышел<br>24 сентября 2015
+                            года</strong><strong style="line-height: normal;">Еженедельная городская газета
+                            «Ясиноватский вестник ДНР» была основана 24 сентября 2015 года. Газета выходит один раз в
+                            неделю по четвергам и состоит из 8 полос.<br></strong><br>
+                    </div>
+                    <span class="magazine" style="font-size: 17.5;">Главная задача издания – информировать читателей о
+                        самых важных новостях и
+                        событиях муниципалитета. Газета выходит один раз в неделю по четвергам и состоит из 8
+                        полос.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">СВЕРЧКОВА<br>Юлия<br>Олеговна</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -70px;">
+                        <div class="infoDescBlock">Главная задача издания – информировать читателей о самых важных
+                            новостях и событиях муниципалитета.<br><br>В газете имеются постоянные рубрики: «Путь к
+                            возрождению», «От первого лица», «Мы помним», «Патриотизм», «Уроки истории»,
+                            «Восстановление» и другие.<br><br>Много внимание уделяется темам восстановления, ремонта
+                            разрушенного жилья и дорог, сфере ЖКХ. <br><br>Популярностью у читателей пользуются рубрики
+                            «Наше интервью», «Спорт», «Культура», «Образование», «Социальная сфера», «Это должен знать
+                            каждый», «На контроле». В рубрике «Люди и судьбы» публикуются зарисовки и очерки о местных
+                            жителях. <br><br>Ныне во главе коллектива главный редактор газеты
+                            Наталья Владимировна Зубач. Награждена Почетной грамотой Главы Республики, нагрудным знаком
+                            «Почетный работник средств массовой информации Донецкой Народной Республики».
+                            <br><br>«Ясиноватский вестник» освещает важную тему патриотизма: начиная от событий Великой
+                            Отечественной войны и заканчивая Спецоперацией.
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции и рекламы:</strong>
+                            <br>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 830-36-92</strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img class="icon-left" src="img/svg_mail.svg" alt="Mail icon">
+                                <strong>svejul@mail.ru</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                src="img/mag_debalc.svg" alt="Дебальцевские вести"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Дебальцевские вести»</span><strong>Первый номер вышел<br>11 апреля 2016
+                            года</strong><strong style="line-height: normal;padding-top: 127px;">«Дебальцевские вести» -
+                            еженедельная городская газета, выходит по четвергам. Издание рассказывает о самых важных
+                            событиях, которые прошли в округе за неделю. <br></strong><br>
+                    </div>
+                    <span class="magazine" style="font-size: 17.5;">Поначалу, после освобождения Дебальцево от
+                        украинской оккупации, она была похожа скорее на информационный листок. К нынешнему
+                        времени издание переросло этот формат.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ФАРАМАЗЯН<br>Игорь<br>Арамович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: 50px;">
+                        <div class="infoDescBlock">Газета была основана 11 апреля 2016 года. Поначалу, после
+                            освобождения Дебальцево от украинской оккупации, она была похожа скорее на информационный
+                            листок, чем на полноценный еженедельник.<br><br>Однако к нынешнему времени издание переросло
+                            этот формат и является полноценным восьмиполосным еженедельником, в котором можно найти не
+                            только новостийные заметки, но и развернутые корреспонденции, краеведческие материалы,
+                            интервью с представителями городской власти и депутатского корпуса, и просто интересные
+                            очерки о людях, живущих и работающих в округе.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img src="img/mag_znamya.svg" alt="Знамя Победы (ДНР)"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Знамя Победы (ДНР)»</span><strong>Первый номер вышел<br>9 мая 1946 года</strong><strong
+                            style="line-height: normal;">9 мая 1946 года вышел первый номер газеты «Знамя Победы», на
+                            тот момент - печатный орган Катыковского райкома КП(б)У и райсовета депутатов трудящихся
+                            Сталинской области.<br></strong><br>
+                    </div>
+                    <span class="magazine" style="font-size: 17.5;">Тираж первой городской газеты составил 2500
+                        экземпляров. Газета представляла собой двухполосник формата А3. Редактором был утвержден
+                        фронтовик Григорий Яковлевич Шиленко.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">СИДОРЕНКО<br>Денис<br>Александрович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -70px;">
+                        <div class="infoDescBlock">Тираж первой городской газеты составил 2500 экземпляров. Газета
+                            представляла собой двухполосник формата А3. Редактором был утвержден фронтовик Григорий
+                            Яковлевич Шиленко.<br><br>C 2018 года и по настоящее время главным редактором является Денис
+                            Александрович Сидоренко <br><br>Сфера деятельности: производство и распространение
+                            периодической печатной продукции. Газета выходит по четвергам. Представляет из себя
+                            двенадцатиполосник формата А3. <br><br>Распространяется на территории Шахтерского
+                            муниципального округа (Шахтерск, Шахтерский район, города Кировское и Ждановка).
+                            <br><br>Тираж издания 2151 экземпляр. Распространяется при помощи редакционной подписки и
+                            розницы, розничной торговли, а также почтовой подписки.
+                            <br><br><strong>Адрес учредителя, издателя и редакции:</strong>
+                            <br>г. Шахтерск ул. Ломоносова 12. <br>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>zpgazeta@inbox.ru</strong>
+                            </div><br>
+                            <div class="iconText">
+                                <img src="img/svg_mail.svg" alt="Mail icon" class="icon-left">
+                                <strong>redone553322@mail.ru </strong>
+                            </div>
+                            <br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (856-55) 433-54 </strong>
+                            </div>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты для рекламы:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 434-71-23</strong>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoEntry magazine">
+                <div class="infoSmall">
+                    <div class="infoMeta">
+                        <div class="infoLogo"><img style="margin-left: -25px; margin-right: -10px;"
+                                alt="Енакиевский рабочий" src="img/mag_enakrab.svg"></div>
+                        <div class="infoMore" onclick="toggleEntry(this)">
+                            Подробнее
+                            <img src="img/moreIco.png" alt="Больше" style="padding-top: 2px;">
+                        </div>
+                    </div>
+                    <div class="infoMeta"
+                        style="margin: 4px 0px 0px 40px;font-size: 20px;font-family: 'Roboto Regular';">
+                        <span>«Енакиевский рабочий»</span><strong>Первый номер вышел<br>в 1918 году</strong><strong
+                            style="line-height: normal;">Газета «Енакиевский рабочий», в той или иной ипостаси,
+                            существует без малого сто десять лет – с 1918 года.<br></strong><br>
+                    </div>
+                    <span class="magazine" style="font-size: 17.5;">За столь длительный период изданию пришлось пережить
+                        многое - события гражданской войны начала прошлого века, Великую Отечественную и период
+                        оккупации, послевоенное восстановление, гибель СССР.</span>
+                </div>
+                <div class="infoEntryExpand" style="padding-top: 0;overflow: visible;">
+                    <div class="infoCeo">
+                        <div class="photo" style="width: 144px; height: 192px; background-color: #d4d4d4;"></div>
+                        <div class="infoPosition">Главный редактор:</div>
+                        <div class="infoFio">ФАРАМАЗЯН<br>Игорь<br>Арамович</div>
+                    </div>
+                    <div class="infoDescription" style="margin-top: -98px;">
+                        <div class="infoDescBlock">За столь длительный период изданию пришлось пережить многое - события
+                            гражданской войны начала прошлого века, Великую Отечественную и период оккупации,
+                            послевоенное восстановление, гибель СССР с последующим существованием Енакиево в составе
+                            Украины, и, наконец, возвращение на Родину, в Россию. <br><br>После госпереворота на Украине
+                            в 2014 году перед изданием, как и перед всей Республикой, и городом, встала нетривиальная
+                            задача – выстоять. Обновленный редакционный коллектив все силы бросил на противостояние
+                            пропагандисткой машине Киева, донося до своих читателей правдивую информацию о происходящем.
+                            Стояла задача сохранить газету для читателей и читателей для газеты. <br><br>Сейчас
+                            «Енакиевский рабочий» от простого информирования жителей города о происходящих событиях,
+                            перешел на информацию с личностным акцентом. Поэтому издание, сохраняя новостную
+                            составляющую, делает упор на конкретного человека. <br><br>В прошлом году мы изменили дизайн
+                            издания, добавив в верстку элементы журнального стиля, а в контенте – все, о чем бы ни
+                            писали, привязано к родному городу. Даже все рубрики в «Енакиевском рабочем» призваны
+                            объединять читателей друг с другом и с городом, и начинаются со слов «наша», «наши», «наше».
+                            <br><br>На это же нацелены два наших проекта, которые пока существуют в виде рубрик «Наши
+                            легенды» и «Наши рекорды». <br><br>
+                            Сейчас издание представляет собой 12-полосный еженедельник и позиционируется как городская
+                            массовая газета. Тираж 1017 экз.<br>
+                        </div>
+                        <div class="infoDescBlock">
+                            <br><strong>Контакты редакции и для рекламы:</strong>
+                            <br><br>
+                            <div class="iconText">
+                                <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
+                                <strong>+7 (949) 355-45-85</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        йа подвал
+    </footer>
+
+</body>
+
+</html>
