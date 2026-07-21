@@ -710,6 +710,7 @@ strong .single {
     margin-left: 40px;
     position: relative;
     top: 0%;
+    max-width: 260px;
 }
 
 .network strong {
@@ -805,6 +806,14 @@ a.link:hover {
 
 .network.entryOpen .dtime {
     top: -30%;
+}
+
+.network .socials a:nth-child(n+5) {
+    display: none;
+}
+
+.network.entryOpen .socials a:nth-child(n+5) {
+    display: initial; /* or display: inline-block; depending on your layout */
 }
 
 /*----------------------- Magazine Page ----------------------*/
