@@ -649,6 +649,13 @@ strong .single {
     font-weight: 400;
 }
 
+.infoTextRadio strong.radio_long{
+    max-width: 215px;
+}
+.radio.entryOpen .infoTextRadio strong.radio_long{
+    max-width: none;
+}
+
 .infoLogoRadio {
     width: 145px;
     height: 168px;
