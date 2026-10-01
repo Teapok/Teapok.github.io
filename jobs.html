@@ -1,0 +1,70 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>РМХ - Рекламодателям</title>
+    <link rel="icon" type="icon-x" href="img/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
+	<meta name="viewport" content="width=1024, initial-scale=1.0, user-scalable=yes">
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            function Centre() {
+                const searchedBlock = document.getElementsByClassName("infoWrapper")[0];
+                if (searchedBlock) {
+                    setTimeout(() => {
+                        const rect = searchedBlock.getBoundingClientRect();
+                        window.scrollBy({
+                            top: rect.top - 20,
+                            behavior: 'smooth'
+                        });
+                    }, 250);
+                }
+            }
+            Centre();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="upGos">
+            Государственное унитарное предприятие Донецкой Народной Республики «Республиканский меди
+            холдинг» (ГУП ДНР «РМХ») — официальный сайт
+        </div>
+        <div class="Header">
+            <a class="headelement" href="index.html">Главная</a>
+            <div class="separator"></div>
+            <div class="headelement active vakan">Вакансии</div> 
+            <div class="separator"></div>
+            <a class="headelement" href="advert.html">Рекламодателям</a>
+            <div class="separator"></div>
+            <a class="headelement" href="contact.html">Контакты</a>
+            <div class="filler"></div>
+        </div>
+        <div class="logoBlock">
+            <div class="logoGrand">
+                <img src="img/logoRmx.png">
+            </div>
+            <div class="longButtons">
+                <a class="longButton" href="tv.html">ТВ</a>
+                <a class="longButton" href="magazine.html">Газеты</a>
+                <a class="longButton" href="radio.html">Радио</a>
+                <a class="longButton" href="network.html">Сетевые издания</a>
+            </div>
+        </div>
+        <div class="infoWrapper ad" style="
+    height: 70vh;
+">
+            <div class="adverTitle map">
+                <span>Вакансии</span>
+            </div>
+            <div class="adverInfo" style="">
+                <div class="adverInfo" style="margin-top: 80px;">
+                <div class="infoDescBlock" style="margin-left: 170px;">На данный момент вакансий нет<br>
+                </div>
+            </div><div class="infoDescBlock" style="margin-left: 90px;"><br>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body></html>
