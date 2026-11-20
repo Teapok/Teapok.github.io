@@ -5,6 +5,7 @@
     <title>РМХ - Контакты</title>
     <link rel="icon" type="icon-x" href="img/favicon.ico">
     <link href="css/style.css" rel="stylesheet">
+	<link href='dist/maplibre-gl.css' rel='stylesheet' />
 	<meta name="viewport" content="width=1024, initial-scale=1.0, user-scalable=yes">
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
@@ -53,11 +54,64 @@
                 <span>Контакты</span>
             </div>
             <div class="adverInfo map" style="display: flex;flex-direction: column;align-items: center;">
-                <br><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2828c9582f6e8390e135eaf7af9d9e4adb82e80642df052d09e488da7071e3a8&amp;source=constructor" width="850" height="512" frameborder="0" style=""></iframe>
+                <br>
+<!-- ... inside .adverInfo.map ... -->
+<link href='dist/maplibre-gl.css' rel='stylesheet' />
+<div id='map' style='width: 850px; height: 512px;'></div>
+<script type='module'>
+import * as maplibregl from './dist/maplibre-gl.mjs';
+
+const coords = [37.80355, 48.01507];
+
+const map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://tiles.openfreemap.org/styles/liberty',
+  center: [37.80355, 48.01507],
+  zoom: 16,
+  pitch: 50,
+  bearing: 20,
+  maxPitch: 85
+});
+
+map.setMissingStyleImageResolver(() => ({
+  width: 1, height: 1, data: new Uint8Array([0,0,0,0])
+}));
+
+map.on('load', () => {
+  map.resize();
+  // 1. Remove US highway shield layers (irrelevant for Donetsk, kills filter warnings)
+  ['highway-shield-non-us', 'highway-shield-us-interstate', 'road_shield_us']
+    .forEach(id => { if (map.getLayer(id)) map.removeLayer(id); });  
+  // Force Russian labels where available
+  for (const layer of map.getStyle().layers) {
+    if (layer.type !== 'symbol') continue;
+    const tf = layer.layout?.['text-field'];
+    if (!tf) continue;
+
+    // Only touch layers that actually use a name field
+    const usesName =
+      JSON.stringify(tf).includes('name'); // catches {name}, get('name'), etc.
+    if (!usesName) continue;
+
+    map.setLayoutProperty(layer.id, 'text-field', [
+      'coalesce',
+      ['get', 'name:ru'],
+      ['get', 'name']
+    ]);
+  }
+
+  new maplibregl.Marker()
+    .setLngLat([37.80355, 48.01507])
+    .setPopup(new maplibregl.Popup().setHTML(
+      '<strong>ГУП ДНР «РМХ»</strong><br>Советская площадь, д. 1, Донецк'
+    ))
+    .addTo(map);
+});
+</script>
             </div>
             <div class="adverInfo" style="margin-top: 85px;">
 			<div class="infoDescBlock" style="margin-left: 90px;">
-                            <strong>Приемная с 9 до 17:</strong>
+                            <strong>Время приёма:<br>с 9-00 до 17-00</strong>
                             <br><br>
                             <div class="iconText">
                                 <img src="img/svg_phone.svg" alt="Phone icon" class="icon-left">
@@ -66,7 +120,7 @@
 							<br>
                         </div>
                 <div class="infoDescBlock" style="margin-left: 90px;">
-                    Советская площадь, 1, Донецк, 283015<br>
+                    Советская площадь, д. 1, г. Донецк, 283015<br>
                 </div>
             </div>
         </div>
