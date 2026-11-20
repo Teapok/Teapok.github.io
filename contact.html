@@ -100,12 +100,13 @@ map.on('load', () => {
     ]);
   }
 
-  new maplibregl.Marker()
-    .setLngLat([37.80355, 48.01507])
-    .setPopup(new maplibregl.Popup().setHTML(
-      '<strong>ГУП ДНР «РМХ»</strong><br>Советская площадь, д. 1, Донецк'
-    ))
-    .addTo(map);
+
+const marker = new maplibregl.Marker({ color: '#c00' })
+  .setLngLat(coords)
+  .setPopup(new maplibregl.Popup().setHTML('<strong>ГУП ДНР «РМХ»</strong><br>Советская площадь, д. 1, Донецк'))
+  .addTo(map);
+
+marker.togglePopup();   // opens it immediately
 });
 </script>
             </div>
